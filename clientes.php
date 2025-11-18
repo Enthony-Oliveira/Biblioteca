@@ -255,7 +255,7 @@ try {
                                 ✏️ Editar
                             </a>
                             
-                            <a href="cliente_emprestimos.php?id=<?= $cliente['id'] ?>" 
+                            <a href="emprestimo_novo.php?id=<?= $cliente['id'] ?>" 
                                class="btn btn-info btn-small"
                                title="Ver empréstimos">
                                 📋 Empréstimos

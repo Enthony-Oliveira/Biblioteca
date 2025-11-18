@@ -98,7 +98,7 @@ try {
                             ✏️ Editar
                         </a>
                         
-                        <?php if ($autor['total_livros'] == 0): ?>
+                        <?php if ($autor['total_livros'] > 0): ?>
                             <a href="autor_excluir.php?id=<?= $autor['id'] ?>" 
                                class="btn btn-danger btn-small confirm-delete">
                                 🗑️ Excluir

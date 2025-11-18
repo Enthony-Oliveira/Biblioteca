@@ -38,7 +38,6 @@ try {
     // Redireciona para login após cadastrar
     header("Location: login.php?sucesso=1");
     exit;
-
 } catch (PDOException $e) {
     echo "Erro ao cadastrar: " . $e->getMessage();
 }

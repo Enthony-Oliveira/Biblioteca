@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
@@ -21,7 +22,7 @@
             width: 350px;
             padding: 30px;
             border-radius: 12px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
 
@@ -65,24 +66,48 @@
             margin-bottom: 15px;
             border: 1px solid #c3e6cb;
         }
+
+        /* 🔗 Estilo do link de cadastro */
+        .cadastro-link {
+            margin-top: 18px;
+            font-size: 14px;
+        }
+
+        .cadastro-link a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        .cadastro-link a:hover {
+            color: #0056b3;
+        }
     </style>
 
 </head>
+
 <body>
 
-<div class="login-container">
-    <h2>Sistema de Biblioteca - Login</h2>
+    <div class="login-container">
+        <h2>Sistema de Biblioteca - Login</h2>
 
-    <?php if (isset($_GET['sucesso'])): ?>
-        <p class="msg-sucesso">Usuário cadastrado com sucesso! Faça login.</p>
-    <?php endif; ?>
+        <?php if (isset($_GET['sucesso'])): ?>
+            <p class="msg-sucesso">Usuário cadastrado com sucesso! Faça login.</p>
+        <?php endif; ?>
 
-    <form action="autenticar.php" method="POST">
-        <input type="email" name="email" placeholder="Email" required>
-        <input type="password" name="senha" placeholder="Senha" required>
-        <button type="submit">Entrar</button>
-    </form>
-</div>
+        <form action="autenticar.php" method="POST">
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="senha" placeholder="Senha" required>
+            <button type="submit">Entrar</button>
+        </form>
+
+        <!-- 🔗 Link para registro -->
+        <p class="cadastro-link">
+            Não tem conta? <a href="usuario_novo.php">Cadastre-se aqui</a>.
+        </p>
+    </div>
 
 </body>
+
 </html>
